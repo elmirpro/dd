@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    static int menu(){
+    static int menu() {
         System.out.println("***********");
         System.out.print("""
                 1)Balans
@@ -12,17 +12,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         return a;
+
     }
-
-
     public static void main(String[] args) {
         int result = menu();
         System.out.println("***********************************************************************************************************************************************************");
         System.out.println(result);
-
-
-
-
-
     }
 }
