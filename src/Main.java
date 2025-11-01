@@ -16,25 +16,28 @@ public class Main {
         return a;
     }
 
-    static void showBalance(double balans){
-        int allCoin = (int) (balans * 100);
+    static void showBalance(double balance){
+        int allCoin = (int) (balance * 100);
         int manat = allCoin / 100;
         int coin = allCoin % 100;
         System.out.println("Balanınız: " + manat + " manat, " + coin + " qəpik.");
     }
 
-    static double cash(double balans){
+    static double cash(double balance){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("*****");
+        System.out.print("Nağdlaşdırmaq istədiyiniz məbləği daxil edin: ");
         double a = scanner.nextDouble();
         if (a <= 0){
-            System.out.println("Çıxarmaq mümkün olmadı!");
-            return a;
+            System.out.println("Məbləğ yanlış daxil edilib!");
+            return balance;
         }
-        else if (a > balans) {
-            System.out.println("Çıxarmaq mümkün olmadı!");
-            return a;
+        else if (a > balance) {
+            System.out.println("Balansınızda kifayət qədər məbləğ mövcud deyil.");
+            return balance;
         }
-        return balans - a;
+
+        return balance - a;
     }
 
     public static void main(String[] args) {
