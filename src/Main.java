@@ -23,7 +23,23 @@ public class Main {
         System.out.println("Balanınız: " + manat + " manat, " + coin + " qəpik.");
     }
 
+    static double cash(double balans){
+        Scanner scanner = new Scanner(System.in);
+        double a = scanner.nextDouble();
+        if (a <= 0){
+            System.out.println("Çıxarmaq mümkün olmadı!");
+            return a;
+        }
+        else if (a > balans) {
+            System.out.println("Çıxarmaq mümkün olmadı!");
+            return a;
+        }
+        return balans - a;
+    }
+
     public static void main(String[] args) {
-        showBalance(0.24);
+        showBalance(77.8);
+        System.out.println(menu());
+        System.out.println(cash(67));
     }
 }
